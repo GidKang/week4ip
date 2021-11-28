@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Dancing Script', cursive;
+}
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(/home/gideon/Desktop/week4ip/img/pizza-background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;    
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.text{
+    width: 60%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 31.5%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+}
+.text h1{
+    font-size: 120px;    
+}
+.text p{
+    margin: 10px o 40px;
+    font-size: 40px;
+    color: white;
+}
