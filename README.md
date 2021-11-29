@@ -7,13 +7,13 @@ This is a landing page for CSV pizza that will allow you to see their products a
 ## Setup/Installation Requirements
 Open Terminal {Ctrl+Alt+T}
 
-git clone https://github.com/GidKang/week4ip.git
+git clone  https://gidkang.github.io/week4ip/
 
 cd CSV-pizza
 
 code . or atom . depending on the text editor of your choice.
 ## Live Link
-https://gidkang.github.io/week4ip/
+ https://gidkang.github.io/week4ip/
 ## Known Bugs
 None.
 ## Technologies Used
