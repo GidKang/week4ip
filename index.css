@@ -50,3 +50,93 @@ nav{
     font-size: 40px;
     color: white;
 }
+/*Menu*/
+.banner2{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(/home/gideon/Desktop/week4ip/img/woodpaper2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.sub-heading{
+    color: white;
+    font-size: 69px;
+    padding-top: 2%;
+    text-align: center;
+}
+.heading{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 2%;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    background:none;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);    
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+
+.menu .box-container .box .content{
+    padding:2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i{
+   font-size: 1.7rem;
+   color:var(--green);
+}
+
+.menu .box-container .box .content h3{
+    color:var(--white);
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .content p{
+    color:var(--white);
+    font-size: 35px;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .box .content .price{
+    color:var(--green);
+    margin-left: 1rem;
+    font-size: 30px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+    color:white;
+    text-align: center;
+    font-size: 35px;
+    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
