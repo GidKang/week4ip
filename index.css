@@ -79,7 +79,6 @@ nav{
 
 .menu .box-container .box{
     background:none;
-    border:.1rem solid rgba(0,0,0,.2);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);    
 }
@@ -98,7 +97,6 @@ nav{
     border-radius: .5rem;
     object-fit: cover;
 }
-
 
 .menu .box-container .box .content{
     padding:2rem;
@@ -133,13 +131,16 @@ nav{
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.btn{
+.add-cart{
     color:white;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     background-color: red;
+    border-radius: 4%;
     font-family: 'Times New Roman', Times, serif;
 }
+    
+
 /*cart*/
 
 #cart-container table{
