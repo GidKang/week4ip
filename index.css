@@ -163,28 +163,38 @@ nav{
 
 .product-title{
     width: 45%;
+    color: white;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
 }
 .price{
     width: 15%;
-    border-bottom: 4px solid lightgray;
+    color: white;
+    border-bottom: 1px solid rgb(255, 255, 255);
     display: flex;
     align-items: center;
 }
 .quantity {
     width: 30%;
-    border-bottom: ;
+    color: white;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
 }
 .total{
     width: 10%;
-    border-bottom: 1px solid lightgray;
+    color: white;
+    border-bottom: 1px solid white;
     display: flex;
     align-items: center;
 }
 .product{
     width: 45%;
+    color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid white;
 }

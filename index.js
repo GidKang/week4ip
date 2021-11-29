@@ -99,7 +99,6 @@ function setItems(product) {
 
 }
 function totalCost(product) {
-    // console.log("The product price is",product.price);
     let cartCost = localStorage.getItem('totalCost');
     
 
@@ -111,5 +110,13 @@ function totalCost(product) {
     }
 }
 
+function displayCart(){
+     let cartItems = localStorage.getItem("producsInCart");
+     cartItems = JSON.parse(cartItems);
 
+     if(cartItems ){
+        
+     }
+}
 onLoadCartNumbers();
+displayCart();
