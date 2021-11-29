@@ -9,7 +9,7 @@ Open Terminal {Ctrl+Alt+T}
 
 git clone https://github.com/GidKang/week4ip.git
 
-cd Delani-Studio
+cd CSV-pizza
 
 code . or atom . depending on the text editor of your choice.
 ## Live Link
