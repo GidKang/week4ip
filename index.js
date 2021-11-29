@@ -41,7 +41,7 @@ let products = [
 ];
 
 for (let i=0; i < carts.length; i++){
-    carts[i].addEventListener('click', () =>{
+    carts[i].addEventListener('click', () => {
       cartNumbers(products[i]);
     })
 }
@@ -49,7 +49,7 @@ for (let i=0; i < carts.length; i++){
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
 
-    if(productNumbers){
+    if(productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
     }
 }
@@ -69,18 +69,25 @@ function cartNumbers(product){
 
     setItems(product);
 }
+
 function setItems(product) {
+
+   
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log("My cartitems are", cartItems);
+    console.log("my cartitems are", cartItems);
 
-    product.inCart = 1;
 
-    cartItems = {
-        [product.tag]: product
+    if(cartItems != null){
+        cartItems[product.tag].inCart += 1;
+    }else{
+        product.inCart = 1;
+        cartItems = {
+         [product.tag]: product
+        }
     }
-    
-    localStorage.setItem("prodcutsInCart",JSON.stringify
+
+    localStorage.setItem("productsInCart", JSON.stringify
     (cartItems));
 
 }
