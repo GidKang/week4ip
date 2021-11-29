@@ -4,37 +4,37 @@ let products = [
     {
         name: 'Margehrita',
         tag: 'margehrita',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
     {
         name: 'Hawaiian',
         tag: 'hawaaian',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
     {
         name: 'Seafood',
         tag: 'seafood',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
     {
         name: 'Pepperoni',
         tag: 'pepperoni',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
     {
         name: 'Veggie',
         tag: 'veggie',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
     {
         name: 'Meat Lover',
         tag: 'meatlover',
-        price: 4.20,
+        price: 4,
         inCart: 0
     },
 
@@ -101,10 +101,14 @@ function setItems(product) {
 function totalCost(product) {
     // console.log("The product price is",product.price);
     let cartCost = localStorage.getItem('totalCost');
-    cartCost = parseInt(cartCost);
+    
 
-    if(cartCost= !=
-    localStorage.setItem("totalCost", product.price);
+    if(cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);    
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }
 }
 
 
