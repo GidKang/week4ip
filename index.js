@@ -1,122 +1,50 @@
-let carts = document.querySelectorAll('.add-cart');
-
-let products = [
-    {
-        name: 'Margehrita',
-        tag: 'margehrita',
-        price: 4,
-        inCart: 0
-    },
-    {
-        name: 'Hawaiian',
-        tag: 'hawaaian',
-        price: 4,
-        inCart: 0
-    },
-    {
-        name: 'Seafood',
-        tag: 'seafood',
-        price: 4,
-        inCart: 0
-    },
-    {
-        name: 'Pepperoni',
-        tag: 'pepperoni',
-        price: 4,
-        inCart: 0
-    },
-    {
-        name: 'Veggie',
-        tag: 'veggie',
-        price: 4,
-        inCart: 0
-    },
-    {
-        name: 'Meat Lover',
-        tag: 'meatlover',
-        price: 4,
-        inCart: 0
-    },
-
-];
-
-for (let i=0; i < carts.length; i++){
-    carts[i].addEventListener('click', () => {
-      cartNumbers(products[i]);
-      totalCost(products[i])
-    })
+$(document).ready(function(){
+    update_amounts();
+    $('.qty, .price').on('keyup keypress blur change', function(e) {
+        update_amounts();
+    });
+});
+function update_amounts(){
+    var sum = 0.0;
+    $('#myTable > tbody  > tr').each(function() {
+        var qty = $(this).find('.qty').val();
+        var price = $(this).find('.price').val();
+        var amount = (qty*price)
+        sum+=amount;
+        $(this).find('.amount').text(''+amount);
+    });
+    $('.total').text(sum);
 }
 
-function onLoadCartNumbers(){
-    let productNumbers = localStorage.getItem('cartNumbers');
+var incrementQty;
+var decrementQty;
+var plusBtn  = $(".cart-qty-plus");
+var minusBtn = $(".cart-qty-minus");
 
-    if(productNumbers) {
-        document.querySelector('.cart span').textContent = productNumbers;
+var incrementQty = plusBtn.click(function() {
+    var $n = $(this)
+    .parent(".button-container")
+    .find(".qty");
+    $n.val(Number($n.val())+1 );
+    update_amounts();
+});
+var decrementQty = minusBtn.click(function() {
+    var $n = $(this)
+    .parent(".button-container")
+    .find(".qty");
+    var QtyVal = Number($n.val());
+    if (QtyVal > 0) {
+        $n.val(QtyVal-1);
     }
-}
-function cartNumbers(product){
-    
-    let productNumbers = localStorage.getItem('cartNumbers');
-    
-    productNumbers = parseInt(productNumbers);
-
-    if( productNumbers ){
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('.cart span').textContent = productNumbers + 1;
-    }else {
-        localStorage.setItem('cartNumbers', 1);
-        document.querySelector('.cart span').textContent = 1;
-    }
-
-    setItems(product);
-}
-
-function setItems(product) {
-
-   
-    let cartItems = localStorage.getItem('productsInCart');
-    cartItems = JSON.parse(cartItems);
-    console.log("my cartitems are", cartItems);
+    update_amounts();
+});
 
 
-    if(cartItems != null){
-
-        if(cartItems[product.tag] == undefined) {
-            cartItems = {...cartItems,
-            [product.tag]: product
-          }
-        }
-        cartItems[product.tag].inCart += 1;
-    }else{
-        product.inCart = 1;
-        cartItems = {
-         [product.tag]: product
-        }
-    }
-
-    localStorage.setItem("productsInCart", JSON.stringify
-    (cartItems));
-
-}
-function totalCost(product) {
-    let cartCost = localStorage.getItem('totalCost');
-    
-
-    if(cartCost != null) {
-        cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + product.price);    
-    } else {
-        localStorage.setItem("totalCost", product.price);
-    }
-}
-
-function displayCart(){
-     let cartItems = localStorage.getItem("producsInCart");
-     cartItems = JSON.parse(cartItems);
-
-     if(cartItems ){
+$("#check-btn").click(function(){
+        var name = prompt("Enter your name please")
+        var address = prompt("Enter your home address please")
         
-     }
-}
-onLoadCartNumbers();
-displayCart();
+         alert(name + " ,Thank you for shopping with us" + "\n" + "Your order has been recieved and is ready to be delivered for free to " + address
+          + "\n" + "Enjoy your meal!")
+          location.reload()
+})
