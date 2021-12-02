@@ -6,7 +6,7 @@
 .banner{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(/img/pizza-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(img/pizza-background.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -54,7 +54,7 @@ nav{
 .banner2{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(/home/gideon/Desktop/week4ip/img/woodpaper2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(img/woodpaper2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -131,70 +131,91 @@ nav{
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.add-cart{
-    color:white;
-    text-align: center;
-    font-size: 25px;
-    background-color: red;
-    border-radius: 4%;
-    font-family: 'Times New Roman', Times, serif;
-}
-    
 
 /*cart*/
 
-.products-container{
-    max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom:100px;
+
+i {
+    margin-right: 10px;
 }
-.product-header{
-    width: 100%;
-    max-width: 650px;
+input:focus,
+button:focus,
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+.form-control:disabled, .form-control[readonly]{
+    background-color: #fff;
+}
+.table tr,
+.table tr td{
+    vertical-align: middle;
+}
+.button-container{
     display: flex;
-    justify-content: flex-start;
-    border-bottom: 4px solid light grey;
-    margin:0 auto;
+    align-items: center;
+}
+.button-container .form-control{
+    max-width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 5px;
+}
+#myTable .form-control{
+    width: auto;
+    display: inline-block;
+}
+.cart-qty-plus,
+.cart-qty-minus{
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.cart-qty-plus:hover,
+.cart-qty-minus:hover{
+    background-color: #5161ce;
+    color: #fff;
 }
 
-.product-title{
-    width: 45%;
+thead tr{
+    background-color: #343A40;
     color: white;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
 }
-.price{
-    width: 15%;
-    color: white;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
+
+.cart-qty-plus{
+    background-color:#00a5e8;
+    color:white;
+    font-weight: 600;
 }
-.quantity {
-    width: 30%;
-    color: white;
-    border-bottom: 1px solid white;
-    display: flex;
-    align-items: center;
+.cart-qty-minus{
+    background-color:#00a5e8;
+    color:white;
+    font-weight: 600;
 }
-.total{
-    width: 10%;
+p{
     color: white;
-    border-bottom: 1px solid white;
-    display: flex;
-    align-items: center;
+    font-size: 40px;
 }
-.product{
-    width: 45%;
+th{
     color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid white;
+    font-size: 40px;
+}
+h2{
+    color: white;
+    text-align:center;
+    font-size: 40px;
+    padding-top:large;
+    padding-bottom: 2%;
+}
+.amount {
+    color: white;
+    font-size: 40px;
+}
+.select crust{
+    size: 40px;
+}
+#submit-btn{
+    background-color: sienna;
 }
