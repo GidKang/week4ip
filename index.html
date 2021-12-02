@@ -14,12 +14,8 @@
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">MENU</a></li>
-                    <li class="cart">
-                        <a href="cart.html">
-                            <ion-icon name="basket"></ion-icon>Cart<span> 0 </span>
-                        </a>
-                    </li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#cart">CART</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,13 +29,12 @@
  <section class="menu" id="menu">
 
  <h3 class="sub-heading">Our Menu</h3>
- <h1 class="heading">Browse through our exquisite offerings and take advantage of our limited time pricing offer:<br>$4 for all medium pizzas and $6 for all large!</h1>
-
+ <h1 class="heading">Browse through our exquisite offerings and take advantage of our limited time pricing of $6 for all large pizzas and free toppings!</h1>
  <div class="box-container">
 
      <div class="box">
          <div class="image">
-             <img src="/img/marg.jpg" alt="">
+             <img src="img/marg.jpg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -52,13 +47,12 @@
              </div>
              <h3>Margehrita</h3>
              <p>Homemade pizza dough, tomato sauce, roasted garlic, mozzarella</p>
-             <a href="#" class="add-cart cart1">ADD TO CART</a>
          </div>
      </div>
 
      <div class="box">
          <div class="image">
-             <img src="/img/hawaiian-pizza.jpg" alt="">
+             <img src="img/hawaiian-pizza.jpg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -71,13 +65,12 @@
              </div>
              <h3>Hawaiian</h3>
              <p>Canadian bacon, homemade pizza crust, pizza sauce, mozzarella cheese, pineapple</p>
-             <a href="#" class="add-cart cart2">ADD TO CART</a>
          </div>
      </div>
 
      <div class="box">
          <div class="image">
-             <img src="/img/seafood.jpg" alt="">
+             <img src="img/seafood.jpg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -90,13 +83,12 @@
              </div>
              <h3>Seafood</h3>
              <p>Bay scallops, pizza sauce, provolone cheese, mozzarella cheese, garlic</p>
-             <a href="#" class="add-cart cart3">ADD TO CART</a>
          </div>
      </div>
 
      <div class="box">
          <div class="image">
-             <img src="/img/pepperoni.jpeg" alt="">
+             <img src="img/pepperoni.jpeg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -109,13 +101,12 @@
              </div>
              <h3>Pepperoni</h3>
              <p>Honey butter, tomato sauce, pepperoni, pizza sauce</p>
-             <a href="#" class="add-cart cart4">ADD TO CART</a>
          </div>
      </div>
 
      <div class="box">
          <div class="image">
-             <img src="/img/veggie.jpg" alt="">
+             <img src="img/veggie.jpg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -128,13 +119,12 @@
              </div>
              <h3>Veggie</h3>
              <p>Olives, roasted red bell, canned artichoke hearts, pizza sauce, red pepper flakes</p>
-             <a href="#" class="add-cart cart5">ADD TO CART</a>
          </div>
      </div>
 
      <div class="box">
          <div class="image">
-             <img src="/img/meatlover.jpg" alt="">
+             <img src="img/meatlover.jpg" alt="">
              <a href="#" class="fas fa-heart"></a>
          </div>
          <div class="content">
@@ -147,13 +137,262 @@
              </div>
              <h3>Meat lover</h3>
              <p>Ham, bacon, pizza sauce, hot sausage, mozzarella</p>
-             <a href="#" class="add-cart cart 6">ADD TO CART</a>
          </div>
      </div>
   </div>
   </section>
-  </div>
+ </div>
+
+  <div class ="banner">
+  <section class="cart" id="cart">
+  <div class="container-fluid mt-5">
+    <h2>Shopping Cart</h2>
+    <div class="row justify-content-center">
+       <div class="col-md-8">
+          <div class="table-responsive">
+             <table id="myTable" class="table">
+                <thead>
+                   <tr>
+                      <th>Name</th>
+                      <th>Qty</th>
+                      <th>Toppings</th>
+                      <th>Crust</th>
+                      <th>Price</th>
+                      <th class="text-right">
+                         <span id="amount" class="amount">Amount</span>
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                           <p>Margehrita</p>
+                        </td>
+                        <td>
+                           <div class="button-container">
+                              <button class="cart-qty-plus" type="button" value="+">+</button>
+                              <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                              <button class="cart-qty-minus" type="button" value="-">-</button>
+                           </div>
+                        </td>
+                        <td>
+                          <select class="toppings">
+                              <option selected>Choose Topping</option>
+                              <option class="" value="chicken">Extra Cheese</option>
+                              <option class="" value="beef">Chilli</option>
+                              <option class="" value="veggie">Anchovies</option>
+                            </select>
+                        </td>
+                        <td>
+                        <select class="crust">
+                          <option selected>Choose Crust</option>
+                          <option class="" value="chicken">Thiccc</option>
+                          <option class="" value="chicken">Thin</option>
+                        </select>
+                        </td>
+                        <td>
+                            <input type="text" value="6" class="price form-control" disabled>
+                        </td>
+                        <td align="right">$ <span id="amount" class="amount">0</span>
+                        </td>
+                     </tr>
+                    
+                  
+                   <tr>
+                    <td>
+                       <p>Hawaiian</p>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-minus" type="button" value="-">-</button>
+                       </div>
+                    </td>
+                    <td>
+                      <select class="toppings">
+                          <option selected>Choose Topping</option>
+                          <option class="" value="chicken">Extra Cheese</option>
+                          <option class="" value="beef">Chilli</option>
+                          <option class="" value="veggie">Anchovies</option>
+                        </select>
+                    </td>
+                    <td>
+                    <select class="crust">
+                      <option selected>Choose Crust</option>
+                      <option class="" value="chicken">Thiccc</option>
+                      <option class="" value="chicken">Thin</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" value="6" class="price form-control" disabled>
+                     </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+                
+                 <tr>
+                    <td>
+                       <p>Seafood</p>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-minus" type="button" value="-">-</button>
+                       </div>
+                    </td>
+                    <td>
+                      <select class="toppings">
+                          <option selected>Choose Topping</option>
+                          <option class="" value="chicken">Extra Cheese</option>
+                          <option class="" value="beef">Chilli</option>
+                          <option class="" value="veggie">Anchovies</option>
+                        </select>
+                    </td>
+                    <td>
+                    <select class="crust">
+                      <option selected>Choose Crust</option>
+                      <option class="" value="chicken">Thiccc</option>
+                      <option class="" value="chicken">Thin</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" value="6" class="price form-control" disabled>
+                     </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td>
+                       <p>Pepperoni</p>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-minus" type="button" value="-">-</button>
+                       </div>
+                    </td>
+                    <td>
+                      <select class="toppings">
+                          <option selected>Choose Topping</option>
+                          <option class="" value="chicken">Extra Cheese</option>
+                          <option class="" value="beef">Chilli</option>
+                          <option class="" value="veggie">Anchovies</option>
+                        </select>
+                    </td>
+                    <td>
+                    <select class="crust">
+                      <option selected>Choose Crust</option>
+                      <option class="" value="chicken">Thiccc</option>
+                      <option class="" value="chicken">Thin</option>
+                    </select>
+                    <td>
+                        <input type="text" value="6" class="price form-control" disabled>
+                     </td>
+                    </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td>
+                       <p>Veggie</p>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-minus" type="button" value="-">-</button>
+                       </div>
+                    </td>
+                    <td>
+                      <select class="toppings">
+                          <option selected>Choose Topping</option>
+                          <option class="" value="chicken">Extra Cheese</option>
+                          <option class="" value="beef">Chilli</option>
+                          <option class="" value="veggie">Anchovies</option>
+                        </select>
+                    </td>
+                    <td>
+                    <select class="crust">
+                      <option selected>Choose Crust</option>
+                      <option class="" value="chicken">Thiccc</option>
+                      <option class="" value="chicken">Thin</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" value="6" class="price form-control" disabled>
+                     </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td>
+                       <p>Meatlover</p>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-minus" type="button" value="-">-</button>
+                       </div>
+                    </td>
+                    <td>
+                      <select class="toppings">
+                          <option selected>Choose Topping</option>
+                          <option class="" value="chicken">Extra Cheese</option>
+                          <option class="" value="beef">Chilli</option>
+                          <option class="" value="veggie">Anchovies</option>
+                        </select>
+                    </td>
+                    <td>
+                    <select class="crust">
+                      <option selected>Choose Crust</option>
+                      <option class="" value="chicken">Thiccc</option>
+                      <option class="" value="chicken">Thin</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="text" value="6" class="price form-control" disabled>
+                     </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+
+                 </tbody>
+                 <tfoot>
+                   <tr>
+                      <td colspan="5"></td>
+                      <td align="right">
+                         <h2>TOTAL = $  <span id="total" class="total">0</span>
+                         <button id="check-btn" class="btn btn-warning">Checkout</button>
+                         </h2>
+                      </td>
+                   </tr>
+                </tfoot>
+             </table>
+          </div>
+       </div>
+    </div>
+ </div>
+ </section>
+ </div>
+              
+
+
+
+
+
+
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
     <script src="index.js"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+
 </body>
 </html>
+
 
